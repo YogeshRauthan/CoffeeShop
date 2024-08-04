@@ -4,7 +4,7 @@ A visually appealing and fully responsive landing page for a coffee shop, built 
 
 ## Live Demo
 
-[View the live site](your-netlify-url-here)
+(https://codercoffee.netlify.app/)
 
 ## Features
 
