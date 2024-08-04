@@ -34,6 +34,7 @@ const cardVariants = {
       stiffness: 150,
       damping: 10,
       ease: "easeInOut",
+      delay: 0.6,
     },
   },
 };
@@ -90,13 +91,22 @@ const Services = () => {
         variants={containerVariants}
         initial="hidden"
         whileInView={"visible"}
-        viewport={{ once: true, amount: 0.8 }}
+        viewport={{ once: true }}
         className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"
       >
         {serviceData.map((service) => (
           <motion.div
             key={service.id}
-            variants={cardVariants}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{
+              type: "spring",
+              stiffness: 150,
+              damping: 10,
+              ease: "easeInOut",
+              delay: 0.6,
+            }}
             className="text-center p-4 space-y-6"
           >
             <img
